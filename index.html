@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get your ducks in a row!</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+<style>
+@keyframes duckConfetti { 0% { transform: translateY(0) scale(0.5); opacity: 0 } 18% { opacity: 1 } 100% { transform: translateY(-84px) scale(1); opacity: 0 } }
+@keyframes duckSpin { to { transform: rotate(540deg) } }
+@font-face { font-family: "Brunson Rough"; src: url("assets/BrunsonRough.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #15161a; }
+a { color: rgb(0,143,215); }
+a:hover { color: rgb(40,142,207); }
+</style>
+</helmet>
+<div style="height:100dvh;min-height:100vh;max-height:100dvh;display:grid;place-items:center;padding: {{ pagePad }};box-sizing:border-box;background:#15161a;overflow:hidden">
+  <div style="position:relative;width: {{ frameW }};height: {{ frameH }};flex:0 0 auto">
+  <div style="position:absolute;left:0;top:0;width:393px;height:852px;overflow:hidden;border-radius:40px;background:rgb(0,143,215);box-shadow:0 30px 80px rgba(0,0,0,0.55);user-select:none;-webkit-user-select:none;touch-action:none;transform: {{ phoneScale }};transform-origin:0 0" onClick="{{ waterClick }}">
+
+    <div style="position:absolute;left:16.323px;top:175px;width:68.04px;height:17.982px;overflow:hidden">
+      <div style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:2.7587%;top:1.857%;width:94.6061%;height:92.2645%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:14.0064%;top:5.1051%;width:73.9962%;height:74.708%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:15.2278%;top:8.6753%;width:71.5535%;height:63.7415%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:22.4853%;top:11.2224%;width:57.04%;height:50.1724%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:28.4468%;top:13.1242%;width:45.1132%;height:42.1421%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:35.0455%;top:17.2284%;width:34.2225%;height:23.3178%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:38.3877%;top:18.9634%;width:26.1961%;height:14.9861%;border-radius:50%;background:rgb(0,143,215)"></div>
+    </div>
+    <div style="position:absolute;left:338.07px;top:170.018px;width:68.04px;height:17.982px;overflow:hidden">
+      <div style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:2.7587%;top:1.857%;width:94.6061%;height:92.2645%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:14.0064%;top:5.1051%;width:73.9962%;height:74.708%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:15.2278%;top:8.6753%;width:71.5535%;height:63.7415%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:22.4853%;top:11.2224%;width:57.04%;height:50.1724%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:28.4468%;top:13.1242%;width:45.1132%;height:42.1421%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:35.0455%;top:17.2284%;width:34.2225%;height:23.3178%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:38.3877%;top:18.9634%;width:26.1961%;height:14.9861%;border-radius:50%;background:rgb(0,143,215)"></div>
+    </div>
+    <div style="position:absolute;left:70.576px;top:277.916px;width:75.21px;height:16.807px;overflow:hidden">
+      <div style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:2.7587%;top:1.857%;width:94.6061%;height:92.2645%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:14.0064%;top:5.1051%;width:73.9962%;height:74.708%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:15.2278%;top:8.6753%;width:71.5535%;height:63.7415%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:22.4853%;top:11.2224%;width:57.04%;height:50.1724%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:28.4468%;top:13.1242%;width:45.1132%;height:42.1421%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:35.0455%;top:17.2284%;width:34.2225%;height:23.3178%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:38.3877%;top:18.9634%;width:26.1961%;height:14.9861%;border-radius:50%;background:rgb(0,143,215)"></div>
+    </div>
+    <div style="position:absolute;left:358.98px;top:403.76px;width:68.04px;height:17.982px;overflow:hidden">
+      <div style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:2.7587%;top:1.857%;width:94.6061%;height:92.2645%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:14.0064%;top:5.1051%;width:73.9962%;height:74.708%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:15.2278%;top:8.6753%;width:71.5535%;height:63.7415%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:22.4853%;top:11.2224%;width:57.04%;height:50.1724%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:28.4468%;top:13.1242%;width:45.1132%;height:42.1421%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:35.0455%;top:17.2284%;width:34.2225%;height:23.3178%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:38.3877%;top:18.9634%;width:26.1961%;height:14.9861%;border-radius:50%;background:rgb(0,143,215)"></div>
+    </div>
+    <div style="position:absolute;left:-29.278px;top:641.604px;width:68.04px;height:17.982px;overflow:hidden">
+      <div style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:2.7587%;top:1.857%;width:94.6061%;height:92.2645%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:14.0064%;top:5.1051%;width:73.9962%;height:74.708%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:15.2278%;top:8.6753%;width:71.5535%;height:63.7415%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:22.4853%;top:11.2224%;width:57.04%;height:50.1724%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:28.4468%;top:13.1242%;width:45.1132%;height:42.1421%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:35.0455%;top:17.2284%;width:34.2225%;height:23.3178%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:38.3877%;top:18.9634%;width:26.1961%;height:14.9861%;border-radius:50%;background:rgb(0,143,215)"></div>
+    </div>
+    <div style="position:absolute;left:338.069px;top:592px;width:68.04px;height:17.982px;overflow:hidden">
+      <div style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:2.7587%;top:1.857%;width:94.6061%;height:92.2645%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:14.0064%;top:5.1051%;width:73.9962%;height:74.708%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:15.2278%;top:8.6753%;width:71.5535%;height:63.7415%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:22.4853%;top:11.2224%;width:57.04%;height:50.1724%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:28.4468%;top:13.1242%;width:45.1132%;height:42.1421%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:35.0455%;top:17.2284%;width:34.2225%;height:23.3178%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:38.3877%;top:18.9634%;width:26.1961%;height:14.9861%;border-radius:50%;background:rgb(0,143,215)"></div>
+    </div>
+    <div style="position:absolute;left:162.479px;top:698.621px;width:68.04px;height:17.982px;overflow:hidden">
+      <div style="position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:2.7587%;top:1.857%;width:94.6061%;height:92.2645%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:14.0064%;top:5.1051%;width:73.9962%;height:74.708%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:15.2278%;top:8.6753%;width:71.5535%;height:63.7415%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:22.4853%;top:11.2224%;width:57.04%;height:50.1724%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:28.4468%;top:13.1242%;width:45.1132%;height:42.1421%;border-radius:50%;background:rgb(0,143,215)"></div>
+      <div style="position:absolute;left:35.0455%;top:17.2284%;width:34.2225%;height:23.3178%;border-radius:50%;background:rgb(255,255,255);opacity:0.1"></div>
+      <div style="position:absolute;left:38.3877%;top:18.9634%;width:26.1961%;height:14.9861%;border-radius:50%;background:rgb(0,143,215)"></div>
+    </div>
+
+    <span style="position:absolute;left:28px;top:81px;width:338.223px;height:153px;font-family:'Brunson Rough',sans-serif;font-weight:400;font-size:64px;line-height:0.8;color:rgb(255,255,255)">Get your ducks in a row!</span>
+
+    <div style="position:absolute;left:222.357px;top:246.907px;width:192px;height:133px;cursor:pointer" onPointerDown="{{ down.harlequin }}" onPointerUp="{{ up.harlequin }}" onPointerCancel="{{ up.harlequin }}" onPointerLeave="{{ up.harlequin }}" onClick="{{ open.harlequin }}">
+      <img src="{{ waterSrc.harlequin }}" alt="" style="position:absolute;left:0;top:0;width:192px;height:133px;display:block;pointer-events:none" />
+    </div>
+    <div style="position:absolute;left:-31.234px;top:330.922px;width:203px;height:107px;cursor:pointer" onPointerDown="{{ down.ruddy }}" onPointerUp="{{ up.ruddy }}" onPointerCancel="{{ up.ruddy }}" onPointerLeave="{{ up.ruddy }}" onClick="{{ open.ruddy }}">
+      <img src="{{ waterSrc.ruddy }}" alt="" style="position:absolute;left:0;top:0;width:203px;height:107px;display:block;pointer-events:none" />
+    </div>
+    <div style="position:absolute;left:198.421px;top:383.799px;width:191px;height:127px;cursor:pointer" onPointerDown="{{ down.mandarin }}" onPointerUp="{{ up.mandarin }}" onPointerCancel="{{ up.mandarin }}" onPointerLeave="{{ up.mandarin }}" onClick="{{ open.mandarin }}">
+      <img src="{{ waterSrc.mandarin }}" alt="" style="position:absolute;left:0;top:0;width:191px;height:127px;display:block;pointer-events:none" />
+    </div>
+    <div style="position:absolute;left:5.246px;top:488.152px;width:200px;height:107px;cursor:pointer" onPointerDown="{{ down.wood }}" onPointerUp="{{ up.wood }}" onPointerCancel="{{ up.wood }}" onPointerLeave="{{ up.wood }}" onClick="{{ open.wood }}">
+      <img src="{{ waterSrc.wood }}" alt="" style="position:absolute;left:0;top:0;width:200px;height:107px;display:block;pointer-events:none" />
+    </div>
+
+    <div style="position:absolute;left:136.5px;top:602.456px;width:120px;height:120px;cursor:pointer" onPointerDown="{{ whiteDown }}" onPointerUp="{{ whiteUp }}" onPointerCancel="{{ whiteUp }}" onPointerLeave="{{ whiteUp }}" onClick="{{ whiteClick }}">
+      <img src="{{ whiteSrc }}" alt="" style="position:absolute;left:0;top:0;width:120px;height:120px;display:block;pointer-events:none" />
+    </div>
+    <sc-if value="{{ celebrate }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;left:196.5px;top:662.456px;width:0;height:0;pointer-events:none">
+        <div style="position:absolute;left:0;top:0;transform:rotate(-5.0deg)"><div style="animation:duckConfetti 820ms cubic-bezier(.2,.7,.4,1) 0ms forwards"><div style="width:5px;height:9px;margin:-3px;border-radius:1px;background:rgb(255,255,255);animation:duckSpin 820ms linear 0ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(32.7deg)"><div style="animation:duckConfetti 900ms cubic-bezier(.2,.7,.4,1) 60ms forwards"><div style="width:6px;height:6px;margin:-3px;border-radius:1px;background:rgb(255,183,0);animation:duckSpin 900ms linear 60ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(46.4deg)"><div style="animation:duckConfetti 760ms cubic-bezier(.2,.7,.4,1) 30ms forwards"><div style="width:6px;height:6px;margin:-3px;border-radius:1px;background:rgb(255,125,64);animation:duckSpin 760ms linear 30ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(84.1deg)"><div style="animation:duckConfetti 880ms cubic-bezier(.2,.7,.4,1) 90ms forwards"><div style="width:5px;height:6px;margin:-3px;border-radius:1px;background:rgb(190,23,33);animation:duckSpin 880ms linear 90ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(97.9deg)"><div style="animation:duckConfetti 940ms cubic-bezier(.2,.7,.4,1) 15ms forwards"><div style="width:6px;height:9px;margin:-3px;border-radius:1px;background:rgb(68,113,56);animation:duckSpin 940ms linear 15ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(135.6deg)"><div style="animation:duckConfetti 800ms cubic-bezier(.2,.7,.4,1) 75ms forwards"><div style="width:6px;height:6px;margin:-3px;border-radius:1px;background:rgb(255,255,255);animation:duckSpin 800ms linear 75ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(149.3deg)"><div style="animation:duckConfetti 860ms cubic-bezier(.2,.7,.4,1) 45ms forwards"><div style="width:5px;height:6px;margin:-3px;border-radius:1px;background:rgb(255,255,255);animation:duckSpin 860ms linear 45ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(187.0deg)"><div style="animation:duckConfetti 780ms cubic-bezier(.2,.7,.4,1) 105ms forwards"><div style="width:6px;height:6px;margin:-3px;border-radius:1px;background:rgb(255,183,0);animation:duckSpin 780ms linear 105ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(200.7deg)"><div style="animation:duckConfetti 920ms cubic-bezier(.2,.7,.4,1) 20ms forwards"><div style="width:6px;height:9px;margin:-3px;border-radius:1px;background:rgb(255,125,64);animation:duckSpin 920ms linear 20ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(238.4deg)"><div style="animation:duckConfetti 840ms cubic-bezier(.2,.7,.4,1) 80ms forwards"><div style="width:5px;height:6px;margin:-3px;border-radius:1px;background:rgb(190,23,33);animation:duckSpin 840ms linear 80ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(252.1deg)"><div style="animation:duckConfetti 960ms cubic-bezier(.2,.7,.4,1) 50ms forwards"><div style="width:6px;height:6px;margin:-3px;border-radius:1px;background:rgb(68,113,56);animation:duckSpin 960ms linear 50ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(289.9deg)"><div style="animation:duckConfetti 800ms cubic-bezier(.2,.7,.4,1) 110ms forwards"><div style="width:6px;height:6px;margin:-3px;border-radius:1px;background:rgb(255,255,255);animation:duckSpin 800ms linear 110ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(303.6deg)"><div style="animation:duckConfetti 880ms cubic-bezier(.2,.7,.4,1) 35ms forwards"><div style="width:5px;height:9px;margin:-3px;border-radius:1px;background:rgb(255,255,255);animation:duckSpin 880ms linear 35ms forwards"></div></div></div>
+        <div style="position:absolute;left:0;top:0;transform:rotate(341.3deg)"><div style="animation:duckConfetti 760ms cubic-bezier(.2,.7,.4,1) 95ms forwards"><div style="width:6px;height:6px;margin:-3px;border-radius:1px;background:rgb(255,183,0);animation:duckSpin 760ms linear 95ms forwards"></div></div></div>
+      </div>
+    </sc-if>
+    <span style="position:absolute;left:119.5px;top:730.456px;width:154px;height:13px;font-family:'Bebas Neue',Bebas,sans-serif;font-size:16px;text-align:center;white-space:nowrap;line-height:0.8;color:rgb(255,255,255)">{{ playLabel }}</span>
+    <span style="position:absolute;left:35.5px;top:753.662px;width:322px;height:13px;opacity:0.5;font-family:'Bebas Neue',Bebas,sans-serif;font-size:16px;text-align:center;white-space:nowrap;line-height:0.8;color:rgb(255,255,255)">{{ hintText }}</span>
+
+    <div style="position:absolute;left:0;top:65px;width:393px;height:787px;overflow:hidden;border-radius:40px 40px 0px 0px;background:rgb(255,255,255);will-change:transform;transform: {{ sheetTransform }};transition: {{ sheetTransition }}" onPointerDown="{{ sheetDown }}" onPointerMove="{{ sheetMove }}" onPointerUp="{{ sheetUp }}" onPointerCancel="{{ sheetUp }}">
+
+      <sc-if value="{{ isMandarin }}" hint-placeholder-val="{{ true }}">
+        <span style="position:absolute;left:31.354px;top:25.726px;width:344.291px;height:26px;font-family:'Brunson Rough',sans-serif;font-size:32px;line-height:0.8;color:rgb(0,0,0);transition:opacity 180ms linear;opacity: {{ peekOpacity }}">mandarin duck</span>
+        <span style="position:absolute;left:18.191px;top:77.818px;width:344.291px;height:154px;opacity:0.3;font-family:'Brunson Rough',sans-serif;font-size:96px;line-height:0.8;color:rgb(0,0,0)">mandarin duck</span>
+        <div style="position:absolute;left:85.384px;top:278.688px;cursor:pointer" onPointerDown="{{ artDown }}" onPointerUp="{{ artUp }}" onPointerCancel="{{ artUp }}" onPointerLeave="{{ artUp }}">
+          <img src="{{ bigSrc.mandarin }}" alt="" style="position:relative;display:block;pointer-events:none" />
+        </div>
+        <span style="position:absolute;left:75.5px;top:740.53px;width:243px;height:13px;opacity:0.9;font-family:'Bebas Neue',Bebas,sans-serif;font-size:16px;text-align:center;white-space:nowrap;line-height:0.8;color:rgb(0,0,0)">What does the mandarin duck sound like?</span>
+      </sc-if>
+
+      <sc-if value="{{ isWood }}" hint-placeholder-val="{{ false }}">
+        <span style="position:absolute;left:31.245px;top:25.726px;width:344.291px;height:26px;font-family:'Brunson Rough',sans-serif;font-size:32px;line-height:0.8;color:rgb(0,0,0);transition:opacity 180ms linear;opacity: {{ peekOpacity }}">WOOD duck</span>
+        <span style="position:absolute;left:18.191px;top:77.818px;width:308.622px;height:154px;opacity:0.3;font-family:'Brunson Rough',sans-serif;font-size:96px;line-height:0.8;color:rgb(0,0,0)">Wood   duck</span>
+        <div style="position:absolute;left:20.635px;top:332.673px;cursor:pointer" onPointerDown="{{ artDown }}" onPointerUp="{{ artUp }}" onPointerCancel="{{ artUp }}" onPointerLeave="{{ artUp }}">
+          <img src="{{ bigSrc.wood }}" alt="" style="position:relative;display:block;pointer-events:none" />
+        </div>
+        <span style="position:absolute;left:87.5px;top:740.53px;width:218px;height:13px;opacity:0.9;font-family:'Bebas Neue',Bebas,sans-serif;font-size:16px;text-align:center;white-space:nowrap;line-height:0.8;color:rgb(0,0,0)">What does the wood duck sound like?</span>
+      </sc-if>
+
+      <sc-if value="{{ isRuddy }}" hint-placeholder-val="{{ false }}">
+        <span style="position:absolute;left:31.245px;top:25.726px;width:344.291px;height:26px;font-family:'Brunson Rough',sans-serif;font-size:32px;line-height:0.8;color:rgb(0,0,0);transition:opacity 180ms linear;opacity: {{ peekOpacity }}">RUDDY duck</span>
+        <span style="position:absolute;left:18.191px;top:77.818px;width:350.351px;height:158px;opacity:0.3;font-family:'Brunson Rough',sans-serif;font-size:96px;line-height:0.82;color:rgb(0,0,0)">Ruddy Duck</span>
+        <div style="position:absolute;left:17.846px;top:321.347px;cursor:pointer" onPointerDown="{{ artDown }}" onPointerUp="{{ artUp }}" onPointerCancel="{{ artUp }}" onPointerLeave="{{ artUp }}">
+          <img src="{{ bigSrc.ruddy }}" alt="" style="position:relative;display:block;pointer-events:none" />
+        </div>
+        <span style="position:absolute;left:85.5px;top:740.53px;width:222px;height:13px;opacity:0.9;font-family:'Bebas Neue',Bebas,sans-serif;font-size:16px;text-align:center;white-space:nowrap;line-height:0.8;color:rgb(0,0,0)">What does the ruddy duck sound like?</span>
+      </sc-if>
+
+      <sc-if value="{{ isHarlequin }}" hint-placeholder-val="{{ false }}">
+        <span style="position:absolute;left:31.245px;top:25.726px;width:344.291px;height:26px;font-family:'Brunson Rough',sans-serif;font-size:32px;line-height:0.8;color:rgb(0,0,0);transition:opacity 180ms linear;opacity: {{ peekOpacity }}">HARLEQUIN duck</span>
+        <span style="position:absolute;left:18.191px;top:77.818px;width:462.463px;height:158px;opacity:0.3;font-family:'Brunson Rough',sans-serif;font-size:96px;line-height:0.82;color:rgb(0,0,0)">Harlequin duck</span>
+        <div style="position:absolute;left:-27.782px;top:269.203px;cursor:pointer" onPointerDown="{{ artDown }}" onPointerUp="{{ artUp }}" onPointerCancel="{{ artUp }}" onPointerLeave="{{ artUp }}">
+          <img src="{{ bigSrc.harlequin }}" alt="" style="position:relative;display:block;pointer-events:none" />
+        </div>
+        <span style="position:absolute;left:73.5px;top:740.53px;width:246px;height:13px;opacity:0.9;font-family:'Bebas Neue',Bebas,sans-serif;font-size:16px;text-align:center;white-space:nowrap;line-height:0.8;color:rgb(0,0,0)">What does the harlequin duck sound like?</span>
+      </sc-if>
+
+      <div style="position:absolute;left:166.5px;top:662.53px;width:71px;height:71px;cursor:pointer" onPointerDown="{{ blueDown }}" onPointerUp="{{ blueUp }}" onPointerCancel="{{ blueUp }}" onPointerLeave="{{ blueUp }}" onClick="{{ blueClick }}">
+        <img src="{{ blueSrc }}" alt="" style="position:absolute;left:0;top:0;width:71px;height:71px;display:block;pointer-events:none" />
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:457,&quot;height&quot;:916},&quot;sheetAnimMs&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:420,&quot;min&quot;:150,&quot;max&quot;:800,&quot;step&quot;:10,&quot;unit&quot;:&quot;ms&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Sheet&quot;},&quot;swipeThreshold&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:70,&quot;min&quot;:20,&quot;max&quot;:200,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Sheet&quot;},&quot;pressFeedback&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Interaction&quot;},&quot;audioSources&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;Record&lt;string, string&gt;&quot;}}">
+const KEYS = ["mandarin", "wood", "ruddy", "harlequin"];
+const PEEK = 722;
+
+class Component extends DCLogic {
+  state = {
+    open: null,
+    expanded: false,
+    drag: 0,
+    dragging: false,
+    pressedWater: null,
+    pressedArt: false,
+    whitePressed: false,
+    bluePressed: false,
+    playing: null,
+    source: null,
+    answer: null,
+    verdict: null,
+  };
+
+  audio = {};
+
+  componentDidMount() {
+    this.fit = () => {
+      const pad = window.innerWidth < 760 ? 0 : 32;
+      const k = Math.min((window.innerWidth - pad * 2) / 393, (window.innerHeight - pad * 2) / 852);
+      this.scale = Math.max(0.2, Math.min(k, 1.6));
+      this.setState({ scale: this.scale, pad });
+    };
+    this.fit();
+    window.addEventListener("resize", this.fit);
+    window.addEventListener("orientationchange", this.fit);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.fit);
+    window.removeEventListener("orientationchange", this.fit);
+  }
+
+  res(id, path) {
+    const r = (typeof window !== "undefined" && window.__resources) || null;
+    return (r && r[id]) || path;
+  }
+
+  srcFor(key) {
+    const map = this.props.audioSources || {};
+    const files = { mandarin: "assets/mandarin.wav", wood: "assets/wood.wav", ruddy: "assets/ruddy.mp3", harlequin: "assets/harlequin.mp3" };
+    return map[key] || this.res("audio-" + key, files[key]);
+  }
+
+  stop() {
+    Object.values(this.audio).forEach(a => { try { a.pause(); a.currentTime = 0; } catch (e) {} });
+  }
+
+  play(key, source) {
+    this.stop();
+    let a = this.audio[key];
+    if (!a) {
+      a = new Audio(this.srcFor(key));
+      a.addEventListener("ended", () => this.setState({ playing: null, source: null }));
+      this.audio[key] = a;
+    }
+    this.setState({ playing: key, source });
+    const p = a.play();
+    if (p && p.catch) p.catch(() => this.setState({ playing: null, source: null }));
+  }
+
+  toggle(key, source) {
+    if (this.state.playing === key && this.state.source === source) {
+      this.stop();
+      this.setState({ playing: null, source: null });
+    } else {
+      this.play(key, source);
+    }
+  }
+
+  press(on) {
+    return this.props.pressFeedback === false ? false : on;
+  }
+
+  renderVals() {
+    const s = this.state;
+    const ms = this.props.sheetAnimMs ?? 420;
+    const threshold = this.props.swipeThreshold ?? 70;
+    const k = s.scale || 1;
+
+    const base = s.open ? (s.expanded ? 0 : PEEK) : 852;
+    const y = s.open ? Math.max(0, Math.min(852, base + s.drag)) : base;
+
+    const water = {}, waterSrc = {};
+    KEYS.forEach(k => {
+      const on = s.open === k || this.press(s.pressedWater === k);
+      water[k] = on ? "variant2" : "default";
+      const wid = "water-" + k + (on ? "-click" : "-default");
+      waterSrc[k] = this.res(wid, "assets/" + wid + ".svg");
+    });
+    const bigOn = this.press(s.pressedArt);
+    const bigSrc = {};
+    KEYS.forEach(k => { const bid = "big-" + k + (bigOn ? "-press" : "-default"); bigSrc[k] = this.res(bid, "assets/" + bid + ".svg"); });
+
+    const down = {}, up = {}, open = {};
+    KEYS.forEach(k => {
+      down[k] = () => this.setState({ pressedWater: k });
+      up[k] = () => this.setState({ pressedWater: null });
+      open[k] = () => {
+        this.keep = true;
+        if (this.state.open === k) {
+          this.stop();
+          this.setState({ open: null, expanded: false, drag: 0, pressedWater: null, playing: null, source: null });
+          return;
+        }
+        const next = { open: k, expanded: false, drag: 0, pressedWater: null };
+        if (this.state.answer) {
+          const right = k === this.state.answer;
+          next.verdict = right ? "correct" : "wrong";
+          if (right) next.answer = null;
+        }
+        this.setState(next);
+      };
+    });
+
+    const playingSheet = s.source === "sheet";
+    const playingHome = s.source === "home";
+
+    return {
+      phoneScale: "scale(" + (s.scale || 1) + ")",
+      frameW: (393 * (s.scale || 1)) + "px",
+      frameH: (852 * (s.scale || 1)) + "px",
+      pagePad: (s.pad === 0 ? "0px" : "32px"),
+      sheetTransform: "translateY(" + y + "px)",
+      sheetTransition: s.dragging ? "none" : "transform " + ms + "ms cubic-bezier(.22,1,.36,1)",
+      peekOpacity: s.expanded ? 0 : 0.3,
+      isMandarin: s.open === "mandarin",
+      isWood: s.open === "wood",
+      isRuddy: s.open === "ruddy",
+      isHarlequin: s.open === "harlequin",
+      water, waterSrc, bigSrc, down, up, open,
+      artVariant: this.press(s.pressedArt) ? "variant2" : "default",
+      artDown: () => this.setState({ pressedArt: true }),
+      artUp: () => this.setState({ pressedArt: false }),
+      whiteVariant: playingHome
+        ? (this.press(s.whitePressed) ? "variant4" : "variant3")
+        : (this.press(s.whitePressed) ? "variant2" : "default"),
+      whiteSrc: (() => { const id = "white-" + (playingHome ? "pause" : "play") + (this.press(s.whitePressed) ? "-press" : ""); return this.res(id, "assets/" + id + ".svg"); })(),
+      whiteDown: () => this.setState({ whitePressed: true }),
+      whiteUp: () => this.setState({ whitePressed: false }),
+      whiteClick: () => {
+        this.keep = true;
+        if (playingHome) { this.stop(); this.setState({ playing: null, source: null }); return; }
+        const pick = KEYS[Math.floor(Math.random() * KEYS.length)];
+        this.setState({ answer: pick, verdict: null });
+        this.play(pick, "home");
+      },
+      celebrate: s.verdict === "correct",
+      playLabel: s.verdict === "correct" ? "Click to hear a different duck" : "Play a random duck sound",
+      hintText: s.verdict === "correct" ? "THATS' correct!" : s.verdict === "wrong" ? "Nooo. Try again!" : "click your best guess for which duck made that sound!",
+      waterClick: () => {
+        if (this.keep) { this.keep = false; return; }
+        if (this.state.open) {
+          this.stop();
+          this.setState({ open: null, expanded: false, drag: 0, playing: null, source: null });
+        }
+      },
+      blueVariant: playingSheet
+        ? (this.press(s.bluePressed) ? "pause-hover" : "pause")
+        : (this.press(s.bluePressed) ? "play-hover" : "play"),
+      blueSrc: (() => { const id = "blue-" + (playingSheet ? "pause" : "play") + (this.press(s.bluePressed) ? "-press" : ""); return this.res(id, "assets/" + id + ".svg"); })(),
+      blueDown: () => this.setState({ bluePressed: true }),
+      blueUp: () => this.setState({ bluePressed: false }),
+      blueClick: (e) => {
+        this.keep = true;
+        if (e) e.stopPropagation();
+        if (s.open) this.toggle(s.open, "sheet");
+      },
+      sheetDown: (e) => {
+        this.keep = true;
+        this.startY = e.clientY;
+        this.moved = false;
+        this.setState({ dragging: true, drag: 0 });
+      },
+      sheetMove: (e) => {
+        if (!this.state.dragging) return;
+        let dy = (e.clientY - this.startY) / k;
+        if (Math.abs(dy) > 4) this.moved = true;
+        if (this.state.expanded) dy = Math.max(0, dy);
+        this.setState({ drag: dy });
+      },
+      sheetUp: (e) => {
+        if (!this.state.dragging) return;
+        const dy = (e.clientY - this.startY) / k;
+        let expanded = this.state.expanded;
+        const next = { dragging: false, drag: 0 };
+        if (!expanded && dy > threshold) {
+          this.stop();
+          this.setState({ dragging: false, drag: 0, open: null, expanded: false, playing: null, source: null });
+          return;
+        }
+        if (!expanded && (dy < -threshold || !this.moved)) expanded = true;
+        else if (expanded && dy > threshold) {
+          expanded = false;
+          this.stop();
+          next.playing = null;
+          next.source = null;
+        }
+        next.expanded = expanded;
+        this.setState(next);
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>
